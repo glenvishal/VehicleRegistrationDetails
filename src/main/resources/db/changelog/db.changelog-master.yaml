@@ -48,7 +48,7 @@ databaseChangeLog:
                   type: varchar(50)
               - column:
                   name: vin
-                  type: int
+                  type: varchar(50)
                   constraints:
                     nullable:  false
               - column:
@@ -87,7 +87,7 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: expired
-                  type: varchar(50)
+                  type: boolean
                   constraints:
                     nullable:  false
               - column:
