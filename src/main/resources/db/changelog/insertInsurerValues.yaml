@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: 3
+      id: 2
       author: Glen
       changes:
         - insert:
@@ -21,3 +21,12 @@ databaseChangeLog:
               - column:
                   name: code
                   value: 13
+        - insert:
+            tableName: insurer
+            columns:
+              - column:
+                  name: name
+                  value: NRMA
+              - column:
+                  name: code
+                  value: 27

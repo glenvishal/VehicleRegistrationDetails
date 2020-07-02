@@ -25,6 +25,37 @@ databaseChangeLog:
                   name:  state
                   type:  char(2)
         - createTable:
+            tableName: vehicle
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: type
+                  type: varchar(50)
+              - column:
+                  name: make
+                  type: varchar(50)
+              - column:
+                  name: model
+                  type: varchar(50)
+              - column:
+                  name: colour
+                  type: varchar(50)
+              - column:
+                  name: vin
+                  type: int
+              - column:
+                  name: tare_weight
+                  type: int
+              - column:
+                  name: gross_mass
+                  type: int
+        - createTable:
             tableName: insurer
             columns:
               - column:
@@ -39,9 +70,10 @@ databaseChangeLog:
                   type: varchar(50)
               - column:
                   name: code
-                  type: varchar(50)
+                  type: int
                   constraints:
                     nullable:  false
+
 
   - include:
       file: insertInsurerValues.yaml
