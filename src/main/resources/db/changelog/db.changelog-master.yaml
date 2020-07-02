@@ -49,6 +49,8 @@ databaseChangeLog:
               - column:
                   name: vin
                   type: int
+                  constraints:
+                    nullable:  false
               - column:
                   name: tare_weight
                   type: int
@@ -86,11 +88,11 @@ databaseChangeLog:
               - column:
                   name: expired
                   type: varchar(50)
+                  constraints:
+                    nullable:  false
               - column:
                   name: expiry_date
                   type: varchar(50)
-                  constraints:
-                    nullable:  false
         - createTable:
             tableName: VehicleRegistration
             columns:
@@ -107,9 +109,17 @@ databaseChangeLog:
               - column:
                   name: registration_expiry_status
                   type: varchar(50)
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_expiry_status
+                    references: registration(expired)
               - column:
                   name: vin
                   type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_vehicle_vin
+                    references: vehicle(vin)
               - column:
                   name: insurer_code
                   type: int
@@ -122,6 +132,6 @@ databaseChangeLog:
   - include:
       file: insertInsurerValues.yaml
       relativeToChangelogFile: true
-  #- include:
-   #   file: insertVehicleValues.yaml
-    #  relativeToChangelogFile: true
+  - include:
+      file: insertVehicleValues.yaml
+      relativeToChangelogFile: true
