@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: Glen
+      changes:
+        - insert:
+            tableName: insurer
+            columns:
+              - column:
+                  name: name
+                  value: AAMi
+              - column:
+                  name: code
+                  value: 17
+        - insert:
+            tableName: insurer
+            columns:
+              - column:
+                  name: name
+                  value: GIO
+              - column:
+                  name: code
+                  value: 13

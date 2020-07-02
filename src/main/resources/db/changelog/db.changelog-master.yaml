@@ -1,0 +1,48 @@
+databaseChangeLog:
+  - changeSet:
+      id:  1
+      author: Glen
+      changes:
+        - createTable:
+            tableName: person
+            columns:
+              - column:
+                  name: id
+                  type:  int
+                  autoIncrement:  true
+                  constraints:
+                    primaryKey:  true
+                    nullable:  false
+              - column:
+                  name:  firstname
+                  type:  varchar(50)
+              - column:
+                  name:  lastname
+                  type:  varchar(50)
+                  constraints:
+                    nullable:  false
+              - column:
+                  name:  state
+                  type:  char(2)
+        - createTable:
+            tableName: insurer
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(50)
+              - column:
+                  name: code
+                  type: varchar(50)
+                  constraints:
+                    nullable:  false
+
+  - include:
+      file: insertInsurerValues.yaml
+      relativeToChangelogFile: true
