@@ -4,10 +4,10 @@ databaseChangeLog:
       author: Glen
       changes:
         - sql:
-            sql: insert into vehicle (plate_number, registration_expiry_status, vin, insurer_code) values ("Wagon", "BMW", "X4 M40i", "Blue", 12389347324, 1700)
+            sql: insert into vehicle (plate_number, registration_expiry_status, vin, insurer_code) values ("EBF28E", false, "12389347324", 32)
         - sql:
-            sql: insert into vehicle (plate_number, registration_expiry_status, vin, insurer_code) values ("Hatch", "Toyota", "Corolla", "Silver", 54646546313, 1432, 1500)
+            sql: insert into vehicle (plate_number, registration_expiry_status, vin, insurer_code) values ("CXD82F", true, "54646546313", 17)
         - sql:
-            sql: insert into vehicle (plate_number, registration_expiry_status, vin, insurer_code) values ("Sedan", "Mercedes", "X4 M40i", "Blue", 87676676762, 1700)
+            sql: insert into vehicle (plate_number, registration_expiry_status, vin, insurer_code) values ("WOP29P", false, 87676676762, 13)
         - sql:
-            sql: insert into vehicle (plate_number, registration_expiry_status, vin, insurer_code) values ("SUV", "Jaguar", "F pace", "Green", 65465466541, 1620)
+            sql: insert into vehicle (plate_number, registration_expiry_status, vin, insurer_code) values ("QWX55Z", false, "65465466541", 27)
