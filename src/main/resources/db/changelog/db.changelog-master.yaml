@@ -88,8 +88,6 @@ databaseChangeLog:
               - column:
                   name: expired
                   type: boolean
-                  constraints:
-                    nullable:  false
               - column:
                   name: expiry_date
                   type: varchar(50)
@@ -107,12 +105,12 @@ databaseChangeLog:
                   name: plate_number
                   type: varchar(50)
               - column:
-                  name: registration_expiry_status
+                  name: expiry_date
                   type: varchar(50)
                   constraints:
                     nullable: false
                     foreignKeyName: fk_expiry_status
-                    references: registration(expired)
+                    references: registration(expiry_date)
               - column:
                   name: vin
                   type: varchar(50)
@@ -128,10 +126,15 @@ databaseChangeLog:
                     foreignKeyName: fk_insurer_code
                     references: insurer(code)
 
-
   - include:
       file: insertInsurerValues.yaml
       relativeToChangelogFile: true
   - include:
       file: insertVehicleValues.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: insertRegistrationValues.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: insertVehicleRegistrationValues.yaml
       relativeToChangelogFile: true

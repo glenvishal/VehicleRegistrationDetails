@@ -1,10 +1,10 @@
-package com.db.to.json;
+package com.registration;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DbToJsonApplicationTests {
+class VehicleRegistrationApplicationTests {
 
 	@Test
 	void contextLoads() {

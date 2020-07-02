@@ -4,11 +4,11 @@ databaseChangeLog:
       author: Glen
       changes:
         - sql:
-            sql: insert into vehicle (type, make, model, colour, vin, tare_weight) values ("Wagon", "BMW", "X4 M40i", "Blue", "12389347324", 1700)
+            sql: insert into vehicle (type, make, model, colour, vin, tare_weight) values ('Wagon', 'BMW', 'X4 M40i', 'Blue', '12389347324', 1700)
         - sql:
-            sql: insert into vehicle (type, make, model, colour, vin, tare_weight, gross_mass) values ("Hatch", "Toyota", "Corolla", "Silver", "54646546313", 1432, 1500)
+            sql: insert into vehicle (type, make, model, colour, vin, tare_weight, gross_mass) values ('Hatch', 'Toyota', 'Corolla', 'Silver', '54646546313', 1432, 1500)
         - sql:
-            sql: insert into vehicle (type, make, model, colour, vin, tare_weight) values ("Sedan", "Mercedes", "X4 M40i", "Blue", "87676676762", 1700)
+            sql: insert into vehicle (type, make, model, colour, vin, tare_weight) values ('Sedan', 'Mercedes', 'X4 M40i', 'Blue', '87676676762', 1700)
         - sql:
-            sql: insert into vehicle (type, make, model, colour, vin, tare_weight) values ("SUV", "Jaguar", "F pace", "Green", "65465466541", 1620)
+            sql: insert into vehicle (type, make, model, colour, vin, tare_weight) values ('SUV', 'Jaguar', 'F pace', 'Green', '65465466541', 1620)
         

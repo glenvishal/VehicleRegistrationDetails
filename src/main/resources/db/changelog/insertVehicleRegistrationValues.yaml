@@ -4,10 +4,10 @@ databaseChangeLog:
       author: Glen
       changes:
         - sql:
-            sql: insert into vehicle (plate_number, registration_expiry_status, vin, insurer_code) values ("EBF28E", false, "12389347324", 32)
+            sql: insert into VehicleRegistration (plate_number, expiry_date, vin, insurer_code) values ('EBF28E', '2021-02-05T23:15:30.000Z', '12389347324', 32)
         - sql:
-            sql: insert into vehicle (plate_number, registration_expiry_status, vin, insurer_code) values ("CXD82F", true, "54646546313", 17)
+            sql: insert into VehicleRegistration (plate_number, expiry_date, vin, insurer_code) values ('CXD82F', '2020-03-01T23:15:30.000Z', '54646546313', 17)
         - sql:
-            sql: insert into vehicle (plate_number, registration_expiry_status, vin, insurer_code) values ("WOP29P", false, 87676676762, 13)
+            sql: insert into VehicleRegistration (plate_number, expiry_date, vin, insurer_code) values ('WOP29P', '2020-12-08T23:15:30.000Z', 87676676762, 13)
         - sql:
-            sql: insert into vehicle (plate_number, registration_expiry_status, vin, insurer_code) values ("QWX55Z", false, "65465466541", 27)
+            sql: insert into VehicleRegistration (plate_number, expiry_date, vin, insurer_code) values ('QWX55Z', '2021-07-20T23:15:30.000Z', '65465466541', 27)
