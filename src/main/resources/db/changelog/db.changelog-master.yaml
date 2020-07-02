@@ -115,7 +115,7 @@ databaseChangeLog:
                     references: registration(expired)
               - column:
                   name: vin
-                  type: int
+                  type: varchar(50)
                   constraints:
                     nullable: false
                     foreignKeyName: fk_vehicle_vin
