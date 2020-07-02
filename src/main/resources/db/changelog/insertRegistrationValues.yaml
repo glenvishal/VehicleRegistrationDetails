@@ -4,11 +4,11 @@ databaseChangeLog:
       author: Glen
       changes:
         - sql:
-            sql: insert into vehicle (expired, expiry_date) values ("Wagon", "BMW", "X4 M40i", "Blue", 12389347324, 1700)
+            sql: insert into vehicle (expired, expiry_date) values (false, "2021-02-05T23:15:30.000Z")
         - sql:
-            sql: insert into vehicle (expired, expiry_date) values ("Hatch", "Toyota", "Corolla", "Silver", 54646546313, 1432, 1500)
+            sql: insert into vehicle (expired, expiry_date) values (true, "2020-03-01T23:15:30.000Z")
         - sql:
-            sql: insert into vehicle (expired, expiry_date) values ("Sedan", "Mercedes", "X4 M40i", "Blue", 87676676762, 1700)
+            sql: insert into vehicle (expired, expiry_date) values (false, "2020-12-08T23:15:30.000Z")
         - sql:
-            sql: insert into vehicle (expired, expiry_date) values ("SUV", "Jaguar", "F pace", "Green", 65465466541, 1620)
+            sql: insert into vehicle (expired, expiry_date) values (false, "2021-07-20T23:15:30.000Z")
         
