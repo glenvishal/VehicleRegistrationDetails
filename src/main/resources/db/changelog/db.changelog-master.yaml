@@ -73,8 +73,55 @@ databaseChangeLog:
                   type: int
                   constraints:
                     nullable:  false
+        - createTable:
+            tableName: registration
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: expired
+                  type: varchar(50)
+              - column:
+                  name: expiry_date
+                  type: varchar(50)
+                  constraints:
+                    nullable:  false
+        - createTable:
+            tableName: VehicleRegistration
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: plate_number
+                  type: varchar(50)
+              - column:
+                  name: registration_expiry_status
+                  type: varchar(50)
+              - column:
+                  name: vin
+                  type: int
+              - column:
+                  name: insurer_code
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_insurer_code
+                    references: insurer(code)
 
 
   - include:
       file: insertInsurerValues.yaml
       relativeToChangelogFile: true
+  #- include:
+   #   file: insertVehicleValues.yaml
+    #  relativeToChangelogFile: true
