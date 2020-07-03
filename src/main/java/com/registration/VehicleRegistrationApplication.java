@@ -11,12 +11,4 @@ public class VehicleRegistrationApplication {
 		SpringApplication.run(VehicleRegistrationApplication.class, args);
 	}
 
-//	@Bean
-//	public SpringLiquibase liquibase() {
-//		SpringLiquibase liquibase = new SpringLiquibase();
-//		liquibase.setChangeLog("classpath:liquibase-changeLog.xml");
-//		//liquibase.setDataSource(dataSource());
-//		return liquibase;
-//	}
-
 }

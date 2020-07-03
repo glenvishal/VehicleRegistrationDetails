@@ -28,10 +28,10 @@ public class Vehicle implements Serializable {
     @Column(nullable = false, unique = true)
     private String vin;
 
-    private int tare_weight;
-    private int gross_mass;
+    private Integer tare_weight;
+    private Integer gross_mass;
 
-    public Vehicle(int id, String type, String make, String model, String colour, String vin, int tare_weight, int gross_mass) {
+    public Vehicle(int id, String type, String make, String model, String colour, String vin, Integer tare_weight, Integer gross_mass) {
         this.id = id;
         this.type = type;
         this.make = make;
