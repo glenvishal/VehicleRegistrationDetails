@@ -4,27 +4,6 @@ databaseChangeLog:
       author: Glen
       changes:
         - createTable:
-            tableName: person
-            columns:
-              - column:
-                  name: id
-                  type:  int
-                  autoIncrement:  true
-                  constraints:
-                    primaryKey:  true
-                    nullable:  false
-              - column:
-                  name:  firstname
-                  type:  varchar(50)
-              - column:
-                  name:  lastname
-                  type:  varchar(50)
-                  constraints:
-                    nullable:  false
-              - column:
-                  name:  state
-                  type:  char(2)
-        - createTable:
             tableName: vehicle
             columns:
               - column:
@@ -91,8 +70,10 @@ databaseChangeLog:
               - column:
                   name: expiry_date
                   type: varchar(50)
+                  constraints:
+                    nullable:  false
         - createTable:
-            tableName: VehicleRegistration
+            tableName: Vehicle_Registration
             columns:
               - column:
                   name: id
@@ -109,7 +90,7 @@ databaseChangeLog:
                   type: varchar(50)
                   constraints:
                     nullable: false
-                    foreignKeyName: fk_expiry_status
+                    foreignKeyName: fk_expiry_date
                     references: registration(expiry_date)
               - column:
                   name: vin
