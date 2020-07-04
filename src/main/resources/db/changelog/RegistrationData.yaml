@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4
+      author: Glen
+      changes:
+        - sql:
+            sql: insert into registration (expired, expiry_date) values (false, '2021-02-05T23:15:30.000Z')
+        - sql:
+            sql: insert into registration (expired, expiry_date) values (true, '2020-03-01T23:15:30.000Z')
+        - sql:
+            sql: insert into registration (expired, expiry_date) values (false, '2020-12-08T23:15:30.000Z')
+        - sql:
+            sql: insert into registration (expired, expiry_date) values (false, '2021-07-20T23:15:30.000Z')
+        

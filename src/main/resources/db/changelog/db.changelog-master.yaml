@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - include:
+      file: CreateInsurerTable.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: CreateVehicleTable.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: CreateRegistrationTable.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: CreateVehicleRegistrationDetailsTable.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: InsurerData.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: VehicleData.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: RegistrationData.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: VehicleRegistrationDetailsData.yaml
+      relativeToChangelogFile: true
