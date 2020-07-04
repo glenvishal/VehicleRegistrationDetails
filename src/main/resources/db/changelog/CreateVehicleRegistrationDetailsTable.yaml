@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id:  1
+      author: Glen
+      changes:
+        - createTable:
+            tableName: Vehicle_Registration
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: plate_number
+                  type: varchar(50)
+              - column:
+                  name: expiry_date
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_expiry_date
+                    references: registration(expiry_date)
+              - column:
+                  name: vin
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_vehicle_vin
+                    references: vehicle(vin)
+              - column:
+                  name: insurer_code
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_insurer_code
+                    references: insurer(code)

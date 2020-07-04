@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id:  1
+      author: Glen
+      changes:
+        - createTable:
+            tableName: insurer
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(50)
+              - column:
+                  name: code
+                  type: int
+                  constraints:
+                    nullable:  false

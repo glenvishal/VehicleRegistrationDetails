@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id:  1
+      author: Glen
+      changes:
+        - createTable:
+            tableName: registration
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: expired
+                  type: boolean
+              - column:
+                  name: expiry_date
+                  type: varchar(50)
+                  constraints:
+                    nullable:  false

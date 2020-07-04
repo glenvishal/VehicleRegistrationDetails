@@ -1,121 +1,25 @@
 databaseChangeLog:
-  - changeSet:
-      id:  1
-      author: Glen
-      changes:
-        - createTable:
-            tableName: vehicle
-            columns:
-              - column:
-                  name: id
-                  type: int
-                  autoIncrement: true
-                  constraints:
-                    primaryKey: true
-                    nullable: false
-              - column:
-                  name: type
-                  type: varchar(50)
-              - column:
-                  name: make
-                  type: varchar(50)
-              - column:
-                  name: model
-                  type: varchar(50)
-              - column:
-                  name: colour
-                  type: varchar(50)
-              - column:
-                  name: vin
-                  type: varchar(50)
-                  constraints:
-                    nullable:  false
-              - column:
-                  name: tare_weight
-                  type: int
-              - column:
-                  name: gross_mass
-                  type: int
-        - createTable:
-            tableName: insurer
-            columns:
-              - column:
-                  name: id
-                  type: int
-                  autoIncrement: true
-                  constraints:
-                    primaryKey: true
-                    nullable: false
-              - column:
-                  name: name
-                  type: varchar(50)
-              - column:
-                  name: code
-                  type: int
-                  constraints:
-                    nullable:  false
-        - createTable:
-            tableName: registration
-            columns:
-              - column:
-                  name: id
-                  type: int
-                  autoIncrement: true
-                  constraints:
-                    primaryKey: true
-                    nullable: false
-              - column:
-                  name: expired
-                  type: boolean
-              - column:
-                  name: expiry_date
-                  type: varchar(50)
-                  constraints:
-                    nullable:  false
-        - createTable:
-            tableName: Vehicle_Registration
-            columns:
-              - column:
-                  name: id
-                  type: int
-                  autoIncrement: true
-                  constraints:
-                    primaryKey: true
-                    nullable: false
-              - column:
-                  name: plate_number
-                  type: varchar(50)
-              - column:
-                  name: expiry_date
-                  type: varchar(50)
-                  constraints:
-                    nullable: false
-                    foreignKeyName: fk_expiry_date
-                    references: registration(expiry_date)
-              - column:
-                  name: vin
-                  type: varchar(50)
-                  constraints:
-                    nullable: false
-                    foreignKeyName: fk_vehicle_vin
-                    references: vehicle(vin)
-              - column:
-                  name: insurer_code
-                  type: int
-                  constraints:
-                    nullable: false
-                    foreignKeyName: fk_insurer_code
-                    references: insurer(code)
-
   - include:
-      file: insertInsurerValues.yaml
+      file: CreateInsurerTable.yaml
       relativeToChangelogFile: true
   - include:
-      file: insertVehicleValues.yaml
+      file: CreateVehicleTable.yaml
       relativeToChangelogFile: true
   - include:
-      file: insertRegistrationValues.yaml
+      file: CreateRegistrationTable.yaml
       relativeToChangelogFile: true
   - include:
-      file: insertVehicleRegistrationValues.yaml
+      file: CreateVehicleRegistrationDetailsTable.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: InsurerData.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: VehicleData.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: RegistrationData.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: VehicleRegistrationDetailsData.yaml
       relativeToChangelogFile: true

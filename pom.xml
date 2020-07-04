@@ -8,10 +8,10 @@
 		<version>2.3.1.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.db.to.json</groupId>
-	<artifactId>db-to-json</artifactId>
+	<groupId>com.registration.details</groupId>
+	<artifactId>vehicleRegistrationDetails</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>db-to-json</name>
+	<name>vehicleRegistration</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

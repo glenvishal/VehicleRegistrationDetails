@@ -1,0 +1,38 @@
+databaseChangeLog:
+  - changeSet:
+      id:  1
+      author: Glen
+      changes:
+        - createTable:
+            tableName: vehicle
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: type
+                  type: varchar(50)
+              - column:
+                  name: make
+                  type: varchar(50)
+              - column:
+                  name: model
+                  type: varchar(50)
+              - column:
+                  name: colour
+                  type: varchar(50)
+              - column:
+                  name: vin
+                  type: varchar(50)
+                  constraints:
+                    nullable:  false
+              - column:
+                  name: tare_weight
+                  type: int
+              - column:
+                  name: gross_mass
+                  type: int
