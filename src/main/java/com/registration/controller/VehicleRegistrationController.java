@@ -26,6 +26,7 @@ public class VehicleRegistrationController {
     public ResponseEntity<RegistrationDetails> getRegistrationDetails() {
         log.info("GET getRegistrationDetails");
         RegistrationDetails registrationDetails = registrationDetailsService.getRegistraionDetails();
+        log.debug("Registration Details: "+registrationDetails);
         return new ResponseEntity<>(registrationDetails, HttpStatus.OK);
     }
 }
