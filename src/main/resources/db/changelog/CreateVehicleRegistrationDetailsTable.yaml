@@ -17,12 +17,11 @@ databaseChangeLog:
                   name: plate_number
                   type: varchar(50)
               - column:
+                  name: expired
+                  type: boolean
+              - column:
                   name: expiry_date
                   type: varchar(50)
-                  constraints:
-                    nullable: false
-                    foreignKeyName: fk_expiry_date
-                    references: registration(expiry_date)
               - column:
                   name: vin
                   type: varchar(50)

@@ -5,9 +5,9 @@ databaseChangeLog:
   - include:
       file: CreateVehicleTable.yaml
       relativeToChangelogFile: true
-  - include:
-      file: CreateRegistrationTable.yaml
-      relativeToChangelogFile: true
+  #- include:
+   #   file: CreateRegistrationTable.yaml
+    #  relativeToChangelogFile: true
   - include:
       file: CreateVehicleRegistrationDetailsTable.yaml
       relativeToChangelogFile: true
@@ -17,9 +17,9 @@ databaseChangeLog:
   - include:
       file: VehicleData.yaml
       relativeToChangelogFile: true
-  - include:
-      file: RegistrationData.yaml
-      relativeToChangelogFile: true
+  #- include:
+   #   file: RegistrationData.yaml
+    #  relativeToChangelogFile: true
   - include:
       file: VehicleRegistrationDetailsData.yaml
       relativeToChangelogFile: true

@@ -15,6 +15,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @ToString
 @Table(name = "registration")
+@Deprecated
 public class Registration implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

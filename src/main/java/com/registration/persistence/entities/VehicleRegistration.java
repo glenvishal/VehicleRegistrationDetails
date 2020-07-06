@@ -1,19 +1,14 @@
 package com.registration.persistence.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import com.registration.model.Registration;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Getter
-@Setter
-@NoArgsConstructor
-@ToString
+@Data
 @Table(name = "VehicleRegistration")
 public class VehicleRegistration implements Serializable {
     @Id
@@ -22,8 +17,12 @@ public class VehicleRegistration implements Serializable {
     private int id;
     private String plate_number;
 
-    @ManyToOne
-    @JoinColumn(name = "expiry_date", referencedColumnName = "expiry_date")
+    @JsonIgnore
+    private boolean expired;
+    @JsonIgnore
+    private String expiry_date;
+
+    @Transient
     private Registration registration;
 
     @ManyToOne
@@ -33,4 +32,16 @@ public class VehicleRegistration implements Serializable {
     @ManyToOne
     @JoinColumn(name = "insurer_code", referencedColumnName = "code")
     private Insurer insurer;
+
+    public Registration getRegistration() {
+        this.registration = new Registration();
+        this.registration.setExpired(this.expired);
+        this.registration.setExpiry_date(this.expiry_date);
+        return registration;
+    }
+
+    public void setRegistration(Registration registration) {
+        this.expired = registration.isExpired();
+        this.expiry_date = registration.getExpiry_date();
+    }
 }
