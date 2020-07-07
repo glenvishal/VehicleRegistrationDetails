@@ -1,6 +1,9 @@
 package com.registration.persistent.dao;
 
+import com.registration.model.Registration;
 import com.registration.persistence.dao.VehicleRegistrationDao;
+import com.registration.persistence.entities.Insurer;
+import com.registration.persistence.entities.Vehicle;
 import com.registration.persistence.entities.VehicleRegistration;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -38,14 +41,6 @@ public class VehicleRegistrationDaoTest {
     }
 
     @Test
-    public void testVehicleRegistrationExpiryDate(){
-        List<VehicleRegistration> vehicleRegistrationList = vehicleRegistrationDao.findAll();
-        vehicleRegistrationList.forEach( v -> {
-            assertThat(expiryDates.contains(v.getRegistration().getExpiry_date())).isTrue();
-        });
-    }
-
-    @Test
     public void testVehicleRegistrationVin(){
         List<VehicleRegistration> vehicleRegistrationList = vehicleRegistrationDao.findAll();
         vehicleRegistrationList.forEach( v -> {
@@ -59,5 +54,26 @@ public class VehicleRegistrationDaoTest {
         vehicleRegistrationList.forEach( v -> {
             assertThat(codes.contains(Integer.toString(v.getInsurer().getCode()))).isTrue();
         });
+    }
+
+    @Test
+    public void testVehicleRegistrationInsert(){
+//        Vehicle vehicle = new Vehicle();
+//        vehicle.setVin("54646546315");
+//
+//        Insurer insurer = new Insurer();
+//        insurer.setCode(45);
+//
+//        Registration registration = new Registration();
+//        registration.setExpired(false);
+//        registration.setExpiry_date("2022-02-05T23:15:30.000Z");
+//
+//        VehicleRegistration vehicleRegistration = new VehicleRegistration();
+//        vehicleRegistration.setPlate_number("12344");
+//        vehicleRegistration.setVehicle(vehicle);
+//        vehicleRegistration.setRegistration(registration);
+//        vehicleRegistration.setInsurer(insurer);
+//
+//        vehicleRegistrationDao.save(vehicleRegistration);
     }
 }

@@ -13,8 +13,15 @@ import static io.restassured.RestAssured.when;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.CoreMatchers.is;
 
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class VehicleRegistrationApplicationTests {
+
+	@BeforeAll
+	public static void setUp(){
+		RestAssured.baseURI = "http://localhost";
+		RestAssured.port = 8080;
+	}
+
 
 	@Test
 	void testHttp200Status() {
